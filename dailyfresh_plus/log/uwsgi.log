@@ -1,0 +1,569 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 20 22:55:56 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-21-generic #22-Ubuntu SMP Wed May 15 13:13:21 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.78.134:8001 fd 3
+uwsgi socket 0 bound to TCP address 192.168.78.134:8000 fd 6
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x555ed590bd70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364520 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+ModuleNotFoundError: No module named '/home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/dailyfresh_plus/wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14748)
+spawned uWSGI worker 1 (pid: 14749, cores: 1)
+spawned uWSGI worker 2 (pid: 14750, cores: 1)
+spawned uWSGI worker 3 (pid: 14751, cores: 1)
+spawned uWSGI worker 4 (pid: 14752, cores: 1)
+spawned uWSGI http 1 (pid: 14753)
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 20 22:55:57 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-21-generic #22-Ubuntu SMP Wed May 15 13:13:21 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 20 22:56:33 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-21-generic #22-Ubuntu SMP Wed May 15 13:13:21 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 14750|app: -1|req: -1/1] 192.168.78.1 () {40 vars in 775 bytes} [Thu Jun 20 22:57:15 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 14751|app: -1|req: -1/2] 192.168.78.1 () {40 vars in 726 bytes} [Thu Jun 20 22:57:15 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 14751|app: -1|req: -1/3] 192.168.78.1 () {42 vars in 805 bytes} [Thu Jun 20 23:08:00 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 14751|app: -1|req: -1/4] 192.168.78.1 () {44 vars in 778 bytes} [Thu Jun 20 23:08:00 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 20 23:08:06 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-21-generic #22-Ubuntu SMP Wed May 15 13:13:21 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 14751|app: -1|req: -1/5] 192.168.78.1 () {42 vars in 805 bytes} [Thu Jun 20 23:08:09 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 14751|app: -1|req: -1/6] 192.168.78.1 () {44 vars in 778 bytes} [Thu Jun 20 23:08:09 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 14751|app: -1|req: -1/7] 192.168.78.1 () {42 vars in 805 bytes} [Thu Jun 20 23:08:09 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 14752|app: -1|req: -1/8] 192.168.78.1 () {44 vars in 778 bytes} [Thu Jun 20 23:08:09 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Gracefully killing worker 3 (pid: 14751)...
+Gracefully killing worker 1 (pid: 14749)...
+gateway "uWSGI http 1" has been buried (pid: 14753)
+...brutally killing workers...
+worker 1 buried after 0 seconds
+worker 2 buried after 0 seconds
+worker 3 buried after 0 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 6 mapped to socket 0 (192.168.78.134:8000)
+running /home/achilles/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 20 23:41:36 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-21-generic #22-Ubuntu SMP Wed May 15 13:13:21 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.78.134:8001 fd 3
+uwsgi socket 0 inherited INET address 192.168.78.134:8000 fd 6
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x563988debb20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364520 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+ModuleNotFoundError: No module named '/home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/dailyfresh_plus/wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 14748)
+spawned uWSGI worker 1 (pid: 15487, cores: 1)
+spawned uWSGI worker 2 (pid: 15488, cores: 1)
+spawned uWSGI worker 3 (pid: 15489, cores: 1)
+spawned uWSGI worker 4 (pid: 15490, cores: 1)
+spawned uWSGI http 1 (pid: 15491)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 12:14:33 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.78.134:8001 fd 4
+uWSGI http bound on 192.168.78.134:8000          #直接访问时使用 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:36031 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562cdc12bec0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364520 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+ModuleNotFoundError: No module named '/home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/dailyfresh_plus/wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11725)
+spawned uWSGI worker 1 (pid: 11727, cores: 1)
+spawned uWSGI worker 2 (pid: 11728, cores: 1)
+spawned uWSGI worker 3 (pid: 11729, cores: 1)
+spawned uWSGI worker 4 (pid: 11731, cores: 1)
+spawned uWSGI http 1 (pid: 11732)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/1] 192.168.78.1 () {42 vars in 799 bytes} [Fri Jun 21 12:14:52 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/2] 192.168.78.1 () {40 vars in 726 bytes} [Fri Jun 21 12:14:52 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 12:17:50 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/3] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 12:17:55 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/4] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 12:17:56 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/5] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 12:17:56 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/6] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 12:17:56 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/7] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 12:17:56 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/8] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 12:17:57 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/9] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 12:17:57 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/10] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 12:17:57 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/11] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 12:17:57 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/12] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 12:17:57 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 15:05:02 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/13] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 15:05:05 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/14] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 15:05:05 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/15] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 15:05:06 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/16] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 15:05:06 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11731|app: -1|req: -1/17] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 15:05:07 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11731|app: -1|req: -1/18] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 15:05:07 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 15:08:30 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 15:09:56 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001          #直接访问时使用).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/19] 192.168.78.1 () {42 vars in 806 bytes} [Fri Jun 21 15:10:01 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 11728|app: -1|req: -1/20] 192.168.78.1 () {44 vars in 779 bytes} [Fri Jun 21 15:10:01 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 17:35:52 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.78.134:8001 fd 4
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001          #直接访问时使用).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 20:28:19 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.78.134:8000 fd 3
+uwsgi socket 0 bound to TCP address 192.168.78.134:8001 fd 6
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+Python main interpreter initialized at 0x5566235c8e90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+uwsgi启动了
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5566235c8e90 pid: 15017 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15017)
+spawned uWSGI worker 1 (pid: 15021, cores: 2)
+spawned uWSGI worker 2 (pid: 15022, cores: 2)
+spawned uWSGI worker 3 (pid: 15024, cores: 2)
+spawned uWSGI worker 4 (pid: 15026, cores: 2)
+*** Stats server enabled on 192.168.78.134:8002 fd: 19 ***
+spawned uWSGI http 1 (pid: 15028)
+2019-06-21 12:28:41,091[django_console:18] [views:index] [INFO:开始调用index方法]
+2019-06-21 12:28:41,097[django_console:23] [views:index] [INFO:开始设置缓存]
+2019-06-21 12:28:41,116[django_console:42] [views:index] [INFO:获取信息完毕4]
+[pid: 15024|app: 0|req: 1/1] 192.168.78.1 () {40 vars in 775 bytes} [Fri Jun 21 12:28:40 2019] GET / => generated 8379 bytes in 342 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /static/images/banner/banner01.jpg
+[pid: 15024|app: 0|req: 2/2] 192.168.78.1 () {40 vars in 770 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/banner/banner01.jpg => generated 3033 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/banner/adv02.jpg
+[pid: 15024|app: 0|req: 3/3] 192.168.78.1 () {40 vars in 764 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/banner/adv02.jpg => generated 3024 bytes in 34 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/images/banner/adv01.jpg
+[pid: 15022|app: 0|req: 2/4] 192.168.78.1 () {40 vars in 764 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/banner/adv01.jpg => generated 3024 bytes in 154 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/banner/goods.jpg
+[pid: 15022|app: 0|req: 2/5] 192.168.78.1 () {40 vars in 764 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/banner/goods.jpg => generated 3024 bytes in 304 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/images/goods/goods012.jpg
+[pid: 15024|app: 0|req: 4/6] 192.168.78.1 () {40 vars in 768 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/goods/goods012.jpg => generated 3030 bytes in 26 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/goods/goods003.jpg
+[pid: 15022|app: 0|req: 3/7] 192.168.78.1 () {40 vars in 768 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/goods/goods003.jpg => generated 3030 bytes in 27 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /images/icons.png
+[pid: 15024|app: 0|req: 5/8] 192.168.78.1 () {40 vars in 736 bytes} [Fri Jun 21 12:28:41 2019] GET /images/icons.png => generated 2982 bytes in 26 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/images/goods/goods002.jpg
+[pid: 15024|app: 0|req: 7/9] 192.168.78.1 () {40 vars in 768 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/goods/goods002.jpg => generated 3030 bytes in 33 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/type/goods021.jpg
+[pid: 15024|app: 0|req: 7/10] 192.168.78.1 () {40 vars in 766 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/type/goods021.jpg => generated 3027 bytes in 16 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/images/banner/goods02.jpg
+Not Found: /static/images/banner/banner02.jpg
+[pid: 15026|app: 0|req: 2/12] 192.168.78.1 () {40 vars in 770 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/banner/banner02.jpg => generated 3033 bytes in 479 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15026|app: 0|req: 2/12] 192.168.78.1 () {40 vars in 768 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/banner/goods02.jpg => generated 3030 bytes in 324 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/goods/goods019.jpg
+[pid: 15022|app: 0|req: 5/13] 192.168.78.1 () {40 vars in 768 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/goods/goods019.jpg => generated 3030 bytes in 33 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/images/goods/goods021.jpg
+[pid: 15024|app: 0|req: 8/14] 192.168.78.1 () {40 vars in 768 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/goods/goods021.jpg => generated 3030 bytes in 70 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/type/banner03.jpg
+[pid: 15026|app: 0|req: 3/15] 192.168.78.1 () {40 vars in 766 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/type/banner03.jpg => generated 3027 bytes in 44 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/images/type/banner04.jpg
+[pid: 15024|app: 0|req: 10/16] 192.168.78.1 () {40 vars in 766 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/type/banner04.jpg => generated 3027 bytes in 28 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/images/type/banner05.jpg
+[pid: 15024|app: 0|req: 10/17] 192.168.78.1 () {40 vars in 766 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/type/banner05.jpg => generated 3027 bytes in 18 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/goods/goods020.jpg
+Not Found: /static/images/type/banner06.jpg
+[pid: 15022|app: 0|req: 5/18] 192.168.78.1 () {40 vars in 768 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/goods/goods020.jpg => generated 3030 bytes in 107 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 15026|app: 0|req: 4/19] 192.168.78.1 () {40 vars in 766 bytes} [Fri Jun 21 12:28:42 2019] GET /static/images/type/banner06.jpg => generated 3027 bytes in 35 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/goods/goods001.jpg
+Not Found: /static/images/type/fruit.jpg
+[pid: 15021|app: 0|req: 2/21] 192.168.78.1 () {40 vars in 760 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/type/fruit.jpg => generated 3018 bytes in 482 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15021|app: 0|req: 2/21] 192.168.78.1 () {40 vars in 768 bytes} [Fri Jun 21 12:28:41 2019] GET /static/images/goods/goods001.jpg => generated 3030 bytes in 445 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+2019-06-21 12:28:48,930[django_console:151] [views:detail] [INFO:进入商品详情界面,当前商品id1]
+2019-06-21 12:28:48,933[django_console:160] [views:detail] [INFO:已经获得商品信息1鲜芒1]
+2019-06-21 12:28:48,963[django_console:166] [views:detail] [INFO:获取商品信息完毕，新品奇异果1]
+[pid: 15024|app: 0|req: 11/22] 192.168.78.1 () {42 vars in 834 bytes} [Fri Jun 21 12:28:48 2019] GET /detail/1 => generated 7714 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /static/images/goods/goods001.jpg
+[pid: 15026|app: 0|req: 5/23] 192.168.78.1 () {40 vars in 776 bytes} [Fri Jun 21 12:28:48 2019] GET /static/images/goods/goods001.jpg => generated 3030 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/images/goods/goods012.jpg
+[pid: 15022|app: 0|req: 6/24] 192.168.78.1 () {40 vars in 776 bytes} [Fri Jun 21 12:28:48 2019] GET /static/images/goods/goods012.jpg => generated 3030 bytes in 24 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /detail/static/js/slide.js
+[pid: 15022|app: 0|req: 7/25] 192.168.78.1 () {40 vars in 726 bytes} [Fri Jun 21 12:28:49 2019] GET /detail/static/js/slide.js => generated 3009 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/images/goods/goods003.jpg
+[pid: 15026|app: 0|req: 6/26] 192.168.78.1 () {40 vars in 776 bytes} [Fri Jun 21 12:28:49 2019] GET /static/images/goods/goods003.jpg => generated 3030 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /images/icons.png
+[pid: 15026|app: 0|req: 7/27] 192.168.78.1 () {40 vars in 744 bytes} [Fri Jun 21 12:28:49 2019] GET /images/icons.png => generated 2982 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /detail/static/js/slide.js
+[pid: 15024|app: 0|req: 12/28] 192.168.78.1 () {40 vars in 726 bytes} [Fri Jun 21 12:28:49 2019] GET /detail/static/js/slide.js => generated 3009 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Fri Jun 21 12:30:11 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Jun 21 12:30:11 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Jun 21 12:30:11 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Jun 21 12:30:11 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Jun 21 12:30:11 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Jun 21 12:30:11 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Jun 21 12:30:11 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Jun 21 12:30:11 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 22:11:59 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8001          #直接访问时使用,会绕过nginx).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 23:19:39 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.78.134:8001          #直接访问时使用,会绕过nginx fd 3
+uwsgi socket 0 bound to TCP address 192.168.78.134:8002 fd 6
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+Python main interpreter initialized at 0x555a5ef8d0a0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 521120 bytes (508 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+uwsgi启动了
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x555a5ef8d0a0 pid: 17344 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 17344)
+spawned uWSGI worker 1 (pid: 17348, cores: 4)
+spawned uWSGI worker 2 (pid: 17349, cores: 4)
+spawned uWSGI worker 3 (pid: 17353, cores: 4)
+spawned uWSGI worker 4 (pid: 17354, cores: 4)
+*** Stats server enabled on 192.168.78.134:9000 fd: 19 ***
+spawned uWSGI http 1 (pid: 17355)
+2019-06-21 15:19:46,303[django_console:18] [views:index] [INFO:开始调用index方法]
+2019-06-21 15:19:46,309[django_console:23] [views:index] [INFO:开始设置缓存]
+2019-06-21 15:19:46,324[django_console:42] [views:index] [INFO:获取信息完毕4]
+[pid: 17354|app: 0|req: 1/1] 192.168.78.1 () {44 vars in 833 bytes} [Fri Jun 21 15:19:46 2019] GET / => generated 8379 bytes in 276 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /images/icons.png
+[pid: 17348|app: 0|req: 1/2] 192.168.78.1 () {44 vars in 794 bytes} [Fri Jun 21 15:19:46 2019] GET /images/icons.png => generated 2982 bytes in 232 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+2019-06-21 15:19:52,109[django_console:151] [views:detail] [INFO:进入商品详情界面,当前商品id1]
+2019-06-21 15:19:52,117[django_console:160] [views:detail] [INFO:已经获得商品信息1鲜芒1]
+2019-06-21 15:19:52,121[django_console:166] [views:detail] [INFO:获取商品信息完毕，新品奇异果1]
+[pid: 17348|app: 0|req: 2/3] 192.168.78.1 () {46 vars in 892 bytes} [Fri Jun 21 15:19:52 2019] GET /detail/1 => generated 7714 bytes in 73 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 3)
+Not Found: /detail/static/js/slide.js
+[pid: 17353|app: 0|req: 1/4] 192.168.78.1 () {44 vars in 784 bytes} [Fri Jun 21 15:19:52 2019] GET /detail/static/js/slide.js => generated 3009 bytes in 220 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /images/icons.png
+[pid: 17349|app: 0|req: 1/5] 192.168.78.1 () {44 vars in 802 bytes} [Fri Jun 21 15:19:52 2019] GET /images/icons.png => generated 2982 bytes in 257 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 17349|app: 0|req: 2/6] 192.168.78.1 () {46 vars in 894 bytes} [Fri Jun 21 15:22:00 2019] GET /cart/ => generated 0 bytes in 35 msecs (HTTP/1.1 302) 6 headers in 182 bytes (1 switches on core 1)
+2019-06-21 15:22:00,407[django_console:134] [views:get] [INFO:开始返回登录界面，没有cookies]
+[pid: 17349|app: 0|req: 3/7] 192.168.78.1 () {46 vars in 918 bytes} [Fri Jun 21 15:22:00 2019] GET /user/login => generated 2091 bytes in 59 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 2)
+Not Found: /images/icons02.png
+[pid: 17349|app: 0|req: 5/8] 192.168.78.1 () {44 vars in 822 bytes} [Fri Jun 21 15:22:00 2019] GET /images/icons02.png => generated 2988 bytes in 16 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /images/login_banner.png
+[pid: 17349|app: 0|req: 5/9] 192.168.78.1 () {44 vars in 832 bytes} [Fri Jun 21 15:22:00 2019] GET /images/login_banner.png => generated 3003 bytes in 18 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 3)
+2019-06-21 15:22:02,452[django_console:32] [views:get] [INFO:显示注册界面]
+[pid: 17353|app: 0|req: 2/10] 192.168.78.1 () {46 vars in 926 bytes} [Fri Jun 21 15:22:02 2019] GET /user/register => generated 2633 bytes in 90 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 3)
+Not Found: /images/interval_line.png
+[pid: 17348|app: 0|req: 3/11] 192.168.78.1 () {44 vars in 837 bytes} [Fri Jun 21 15:22:02 2019] GET /images/interval_line.png => generated 3006 bytes in 70 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 2)
+Not Found: /images/register_banner.png
+[pid: 17353|app: 0|req: 4/12] 192.168.78.1 () {44 vars in 841 bytes} [Fri Jun 21 15:22:02 2019] GET /images/register_banner.png => generated 3012 bytes in 74 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 2)
+Not Found: /images/icons02.png
+[pid: 17353|app: 0|req: 4/13] 192.168.78.1 () {44 vars in 825 bytes} [Fri Jun 21 15:22:02 2019] GET /images/icons02.png => generated 2988 bytes in 82 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+2019-06-21 15:26:07,509[django_console:134] [views:get] [INFO:开始返回登录界面，没有cookies]
+[pid: 17349|app: 0|req: 6/14] 192.168.78.1 () {46 vars in 923 bytes} [Fri Jun 21 15:26:07 2019] GET /user/login => generated 2091 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 1)
+Not Found: /images/login_banner.png
+[pid: 17354|app: 0|req: 2/15] 192.168.78.1 () {44 vars in 832 bytes} [Fri Jun 21 15:26:07 2019] GET /images/login_banner.png => generated 3003 bytes in 11 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /images/icons02.png
+[pid: 17353|app: 0|req: 5/16] 192.168.78.1 () {44 vars in 822 bytes} [Fri Jun 21 15:26:07 2019] GET /images/icons02.png => generated 2988 bytes in 13 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+2019-06-21 15:26:10,530[django_console:32] [views:get] [INFO:显示注册界面]
+[pid: 17353|app: 0|req: 6/17] 192.168.78.1 () {46 vars in 926 bytes} [Fri Jun 21 15:26:10 2019] GET /user/register => generated 2633 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 3)
+Not Found: /images/interval_line.png
+[pid: 17349|app: 0|req: 8/18] 192.168.78.1 () {44 vars in 837 bytes} [Fri Jun 21 15:26:10 2019] GET /images/interval_line.png => generated 3006 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 2)
+Not Found: /images/register_banner.png
+[pid: 17354|app: 0|req: 3/19] 192.168.78.1 () {44 vars in 841 bytes} [Fri Jun 21 15:26:10 2019] GET /images/register_banner.png => generated 3012 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /images/icons02.png
+[pid: 17349|app: 0|req: 8/20] 192.168.78.1 () {44 vars in 825 bytes} [Fri Jun 21 15:26:10 2019] GET /images/icons02.png => generated 2988 bytes in 23 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Gracefully killing worker 3 (pid: 17353)...
+Gracefully killing worker 1 (pid: 17348)...
+gateway "uWSGI http 1" has been buried (pid: 17355)
+...brutally killing workers...
+worker 1 buried after 0 seconds
+worker 3 buried after 2 seconds
+worker 2 buried after 3 seconds
+worker 4 buried after 4 seconds
+binary reloading uWSGI...
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 6 mapped to socket 0 (192.168.78.134:8002)
+running /home/achilles/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Jun 21 15:27:37 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15505
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.78.134:8001          #直接访问时使用,会绕过nginx fd 3
+uwsgi socket 0 inherited INET address 192.168.78.134:8002 fd 6
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+Python main interpreter initialized at 0x55c3f3894d70
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 521120 bytes (508 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+uwsgi启动了
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x55c3f3894d70 pid: 17344 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 17344)
+spawned uWSGI worker 1 (pid: 17656, cores: 4)
+spawned uWSGI worker 2 (pid: 17657, cores: 4)
+spawned uWSGI worker 3 (pid: 17661, cores: 4)
+spawned uWSGI worker 4 (pid: 17662, cores: 4)
+*** Stats server enabled on 192.168.78.134:9000 fd: 19 ***
+spawned uWSGI http 1 (pid: 17663)

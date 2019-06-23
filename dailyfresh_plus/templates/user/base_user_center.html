@@ -1,0 +1,59 @@
+{% extends 'user/base_foot.html' %}
+{% block title %}天天生鲜-用户中心{% endblock title%}
+{% block body %}
+<body>
+	<div class="header_con">
+		<div class="header">
+			<div class="welcome fl">欢迎来到天天生鲜!</div>
+			<div class="fr">
+                {#这里进行一个判断，当前获取到了session里的user_name，就说明已经登录#}
+                {% if request.session.user_name|default:'' != '' %}
+				<div class="login_info fl">
+					<h3 style="display: inline">欢迎您：{{ request.session.user_name }}</h3>
+                    <span>|</span>
+                    <a href="/user/logout/">注销</a>
+				</div>
+                {% else %}
+				<div class="login_btn fl">
+					<a href="/user/login">登录</a>
+					<span>|</span>
+					<a href="/user/register">注册</a>
+				</div>
+                {% endif %}
+				<div class="user_link fl">
+					<span>|</span>
+					<a href="/user/user_center_info">用户中心</a>
+					<span>|</span>
+					<a href="cart">我的购物车</a>
+					<span>|</span>
+					<a href="user_center_order">我的订单</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="search_bar clearfix">
+		<a href="/" class="logo fl"><img src="/static/images/logo.png"></a>
+		<div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;用户中心</div>
+		<div class="search_con fr">
+			<form method="get" action="/search">
+			<input type="text" class="input_text fl" name="q" placeholder="搜索商品">
+			<input type="submit" class="input_btn fr" name="" value="搜索">
+			</form>
+		</div>
+	</div>
+
+	<div class="main_con clearfix">
+		<div class="left_menu_con clearfix">
+			<h3>用户中心</h3>
+			<ul>
+				<li><a href="/user/info" {% if title == 'info'%}class="active"{% endif %}>· 个人信息</a></li>
+				<li><a href="{% url 'user_namespace:order_url' 1 %}" {% if title == 'order'%}class="active"{% endif %}>· 全部订单</a></li>
+				<li><a href="/user/site" {% if title == 'site'%}class="active"{% endif %}>· 收货地址</a></li>
+			</ul>
+		</div>
+        {#右侧的单独页面#}
+		{% block right %}{% endblock right %}
+	</div>
+
+{% endblock body %}

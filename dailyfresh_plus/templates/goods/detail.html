@@ -1,0 +1,151 @@
+{% extends 'goods/base.html' %}
+{% block title %}天天生鲜-详细信息{% endblock title%}
+{% block head %}
+<script language="JavaScript" type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+        	//点击加号操作
+            $(".add").click(function () {
+                num = parseFloat($('#number').val());
+                $('#number').val(num+1).blur();
+            });
+
+            //点击减号操作
+            $('#jianhao').click(function () {
+                num = parseFloat($('#number').val());     //专门用于把字符串转换成数值
+                if (num > 1){
+                    $('#number').val(num-1);
+                    $('#number').blur();
+                }
+            });
+
+            //直接修改数量显示
+            $('#number').blur(function () {
+                num = parseInt($('#number').val());     //val() 方法返回或设置被选元素的值。
+                if(num){        //如果不为空
+                    if (num < 1)        //如果小于1
+                        num = 1;
+                    price = parseFloat($('#gprice').text());    //text() 方法方法设置或返回被选元素的文本内容。
+                    total = num * price;
+                    $('#number').val(num);
+                    $('#gtotal').text(total.toFixed(2) + '元');  //toFixed(num) 方法可把原来的数四舍五入为小数位数为num的数字。
+                } else {
+                    $('#number').val(1);
+                    price = parseFloat($('#gprice').text());    //text() 方法方法设置或返回被选元素的文本内容。
+                    total = 1.0 * price;
+                    $('#gtotal').text(total.toFixed(2) + '元');  //toFixed(num) 方法可把原来的数四舍五入为小数位数为num的数字。
+                }
+                }
+            );
+
+            var $add_x = $('#add_cart').offset().top;
+            var $add_y = $('#add_cart').offset().left;
+
+            var $to_x = $('#show_count').offset().top;
+            var $to_y = $('#show_count').offset().left;
+
+            //添加到购物车操作
+            $('#add_cart').click(function(){
+                $(".add_jump").css({'left':$add_y+80,'top':$add_x+10,'display':'block'});
+                if ($('.login_btn').text().indexOf('登录') >= 0){
+                    alert("请先登录后再购买");
+                    location.href = '/user/login';
+                    return;
+                }
+                //ajax操作,增加购物车数量
+                s1();
+
+                //动画
+                $(".add_jump").stop().animate({
+                    'left': $to_y+7,
+                    'top': $to_x+7},
+                    "fast",
+                    function() {
+                        $(".add_jump").fadeOut('fast');
+                    }
+                );
+
+            });
+
+            function s1() {
+                num = parseInt($('.num_show').val());
+                //alert("获取商品id值"+$("#add_cart").attr("good_id")+"是是是")
+                param = {
+                	'id':$("#add_cart").attr("good_id"),
+					'num':num,
+				};
+                $.get('/cart/add/',param, function (data) {
+                    $('#show_count').text(data.cart_count);
+                });
+            }
+        })
+    </script>
+{% endblock head %}
+{% block body %}
+	<div class="breadcrumb">
+		<a href="/">全部分类</a>
+		<span>></span>
+		<a href="{% url 'goods_namespace:list_url' type.id 1 %}">{{ type.name }}</a>
+		<span>></span>
+		<a href="#">商品详情</a>
+	</div>
+
+	<div class="goods_detail_con clearfix">
+		<div class="goods_detail_pic fl"><img src="/static/images/{{ good.image }}"></div>
+
+		<div class="goods_detail_list fr">
+			<h3>{{ good.name }}</h3>
+			<p>{{ good.desc }}</p>
+			<div class="prize_bar">
+				<span class="show_pirze" >¥<em id="gprice">{{ good.price }}</em></span>
+				<span class="show_unit">单  位：{{ good.unit }}</span>
+			</div>
+			<div class="goods_num clearfix">
+				<div class="num_name fl">数 量：</div>
+				<div class="num_add fl">
+					<input type="text" class="num_show fl" value="1" id="number">
+					<a href="javascript:;" class="add fr" id="jiahao">+</a>
+					<a href="javascript:;" class="minus fr" id="jianhao">-</a>
+				</div> 
+			</div>
+			<div class="total">总价：<em id="gtotal">{{good.price}}</em></div>
+			<div class="operate_btn">
+				<a href="javascript:;" class="buy_btn" id="buy">立即购买</a>
+				<a href="javascript:;" class="add_cart" good_id="{{ good.id }}" id="add_cart">加入购物车</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="main_wrap clearfix">
+		<div class="l_wrap fl clearfix">
+			<div class="new_goods">
+				<h3>新品推荐</h3>
+				<ul>
+                    {% for new in new %}
+					<li>
+						<a href="{% url 'goods_namespace:detail_url' new.id %}"><img src="/static/images/{{ new.image }}"></a>
+						<h4><a href="{% url 'goods_namespace:detail_url' new.id %}">{{ new.name }}</a></h4>
+						<div class="prize">￥{{ new.price }}</div>
+					</li>
+                    {% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		<div class="r_wrap fr clearfix">
+			<ul class="detail_tab clearfix">
+				<li class="active">商品介绍</li>
+				<li>评论</li>
+			</ul>
+
+			<div class="tab_content">
+				<dl>
+					<dt>商品详情：</dt>
+					<dd>{{ good.desc }}</dd>
+				</dl>
+			</div>
+
+		</div>
+	</div>
+
+	{% endblock body %}
