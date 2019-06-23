@@ -25,6 +25,7 @@ urlpatterns = [
     path(r'cart/',include(('cart.urls','cart'),namespace='cart_namespace')),
     path(r'order/',include(('order.urls','order'),namespace='order_namespace')),
     path(r'search', include('haystack.urls')),
+    path(r'tinymce/', include('tinymce.urls')),
 ]
 
 # if settings.DEBUG:

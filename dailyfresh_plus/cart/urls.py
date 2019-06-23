@@ -9,7 +9,7 @@ change activity:
             2019/6/16 21:58
 '''
 from django.conf.urls import url
-from .views import cart,add,edit,delete,order
+from .views import cart,add,edit,delete
 
 urlpatterns = [
     url(r'^$',cart,name='cart_url'),

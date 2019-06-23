@@ -567,3 +567,667 @@ spawned uWSGI worker 3 (pid: 17661, cores: 4)
 spawned uWSGI worker 4 (pid: 17662, cores: 4)
 *** Stats server enabled on 192.168.78.134:9000 fd: 19 ***
 spawned uWSGI http 1 (pid: 17663)
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Jun 23 22:33:34 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.78.134:8001          #直接访问时使用,会绕过nginx fd 3
+uwsgi socket 0 bound to TCP address 192.168.78.134:8002 fd 6
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+Python main interpreter initialized at 0x555dafd610a0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 521120 bytes (508 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+uwsgi启动了
+Traceback (most recent call last):
+  File "/home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/dailyfresh_plus/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./goods/admin.py", line 3, in <module>
+    from .models import GoodsType,GoodsSKU,GoodsInfo,IndexTypeGoodsBanner,IndexPromotionBanner,IndexGoodsBanner
+ImportError: cannot import name 'GoodsInfo'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5013)
+spawned uWSGI worker 1 (pid: 5016, cores: 4)
+spawned uWSGI worker 2 (pid: 5017, cores: 4)
+spawned uWSGI worker 3 (pid: 5018, cores: 4)
+spawned uWSGI worker 4 (pid: 5020, cores: 4)
+*** Stats server enabled on 192.168.78.134:9000 fd: 19 ***
+spawned uWSGI http 1 (pid: 5030)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+--- no python application found, check your startup logs for errors ---
+[pid: 5017|app: -1|req: -1/1] 192.168.78.1 () {44 vars in 833 bytes} [Sun Jun 23 14:33:51 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 2)
+--- no python application found, check your startup logs for errors ---
+[pid: 5018|app: -1|req: -1/2] 192.168.78.1 () {44 vars in 784 bytes} [Sun Jun 23 14:33:51 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 2)
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Jun 23 22:35:13 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8002).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Jun 23 22:39:02 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8002).
+bind(): Address already in use [core/socket.c line 769]
+Sun Jun 23 14:39:49 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+!!! uWSGI process 5018 got Segmentation Fault !!!
+corrupted double-linked list
+Sun Jun 23 14:39:49 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:39:49 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Jun 23 22:40:00 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 192.168.78.134:8002 fd 3
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+Python main interpreter initialized at 0x564fb6a40010
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 521120 bytes (508 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+uwsgi启动了
+Traceback (most recent call last):
+  File "/home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/dailyfresh_plus/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./goods/admin.py", line 3, in <module>
+    from .models import GoodsType,GoodsSKU,GoodsInfo,IndexTypeGoodsBanner,IndexPromotionBanner,IndexGoodsBanner
+ImportError: cannot import name 'GoodsInfo'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5194)
+spawned uWSGI worker 1 (pid: 5196, cores: 4)
+spawned uWSGI worker 2 (pid: 5197, cores: 4)
+spawned uWSGI worker 3 (pid: 5201, cores: 4)
+spawned uWSGI worker 4 (pid: 5202, cores: 4)
+*** Stats server enabled on 192.168.78.134:9000 fd: 16 ***
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Sun Jun 23 14:40:47 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 14:40:47 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Jun 23 22:42:47 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 192.168.78.134:8002 fd 3
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+Python main interpreter initialized at 0x56244595f010
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 521120 bytes (508 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+uwsgi启动了
+Traceback (most recent call last):
+  File "/home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/dailyfresh_plus/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/achilles/.local/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./goods/admin.py", line 3, in <module>
+    from .models import GoodsType,GoodsSKU,GoodsInfo,IndexTypeGoodsBanner,IndexPromotionBanner,IndexGoodsBanner
+ImportError: cannot import name 'GoodsInfo'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5220)
+spawned uWSGI worker 1 (pid: 5222, cores: 4)
+spawned uWSGI worker 2 (pid: 5223, cores: 4)
+spawned uWSGI worker 3 (pid: 5227, cores: 4)
+spawned uWSGI worker 4 (pid: 5228, cores: 4)
+*** Stats server enabled on 192.168.78.134:9000 fd: 16 ***
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Jun 23 22:53:36 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8002).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 5227|app: -1|req: -1/1] 192.168.78.1 () {50 vars in 957 bytes} [Sun Jun 23 14:53:41 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Jun 23 22:56:23 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8002).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 5228|app: -1|req: -1/2] 192.168.78.1 () {46 vars in 864 bytes} [Sun Jun 23 14:56:27 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 5227|app: -1|req: -1/3] 192.168.78.1 () {46 vars in 864 bytes} [Sun Jun 23 14:56:28 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Jun 23 22:56:35 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8002).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Jun 24 00:32:13 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.78.134:8002).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 5228|app: -1|req: -1/4] 192.168.78.1 () {44 vars in 833 bytes} [Sun Jun 23 16:32:24 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Sun Jun 23 16:34:01 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 23 16:34:01 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Jun 24 00:34:12 2019] ***
+compiled with version: 8.3.0 on 20 June 2019 07:40:37
+os: Linux-4.18.0-22-generic #23-Ubuntu SMP Tue Jun 4 20:22:46 UTC 2019
+nodename: achilles-linux
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus
+detected binary path: /home/achilles/.local/bin/uwsgi
+chdir() to /home/achilles/pythonprogram/dailyfresh_plus/dailyfresh_plus/
+your processes number limit is 15506
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 192.168.78.134:8002 fd 3
+Python version: 3.6.8 (default, Apr  9 2019, 04:59:38)  [GCC 8.3.0]
+Python main interpreter initialized at 0x558e26b94010
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 521120 bytes (508 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+uwsgi启动了
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x558e26b94010 pid: 6677 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6677)
+spawned uWSGI worker 1 (pid: 6681, cores: 4)
+spawned uWSGI worker 2 (pid: 6682, cores: 4)
+spawned uWSGI worker 3 (pid: 6683, cores: 4)
+spawned uWSGI worker 4 (pid: 6685, cores: 4)
+*** Stats server enabled on 192.168.78.134:9000 fd: 16 ***
+2019-06-23 16:34:17,504[django_console:20] [views:index] [INFO:开始调用index方法]
+2019-06-23 16:34:17,511[django_console:25] [views:index] [INFO:开始设置缓存]
+2019-06-23 16:34:17,526[django_console:46] [views:index] [INFO:获取信息完毕4]
+[pid: 6683|app: 0|req: 1/1] 192.168.78.1 () {46 vars in 864 bytes} [Sun Jun 23 16:34:17 2019] GET / => generated 8379 bytes in 256 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 1/2] 192.168.78.1 () {44 vars in 794 bytes} [Sun Jun 23 16:34:18 2019] GET /images/icons.png => generated 77 bytes in 300 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:34:24,228[django_console:32] [views:get] [INFO:显示注册界面]
+[pid: 6682|app: 0|req: 2/3] 192.168.78.1 () {46 vars in 902 bytes} [Sun Jun 23 16:34:24 2019] GET /user/register => generated 2633 bytes in 30 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 2/4] 192.168.78.1 () {44 vars in 811 bytes} [Sun Jun 23 16:34:24 2019] GET /images/icons02.png => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 2/6] 192.168.78.1 () {44 vars in 823 bytes} [Sun Jun 23 16:34:24 2019] GET /images/interval_line.png => generated 77 bytes in 241 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 2/6] 192.168.78.1 () {44 vars in 827 bytes} [Sun Jun 23 16:34:24 2019] GET /images/register_banner.png => generated 77 bytes in 241 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:34:50,417[django_console:68] [views:post] [INFO:user注册成功，开始保存用户信息]
+2019-06-23 16:34:50,470[django_console:70] [views:post] [INFO:保存用户信息成功]
+2019-06-23 16:34:50,472[django_console:83] [views:send] [INFO:开始发送激活邮件，当前用户user2712305655@qq.com]
+2019-06-23 16:34:50,538[django_console:94] [views:send] [INFO:已发送邮件eyJhbGciOiJIUzUxMiIsImlhdCI6MTU2MTMwNzY5MCwiZXhwIjoxNTYxMzExMjkwfQ.eyJjb25maXJtIjoyfQ.UPJbmz0JSDlmDQhqKJl2dSLI_l6wSKsondgySF1dlFjLNDgpyS3bg05tKze9_U9MT4kn5KWnGR_XrebxIDTzNw]
+[pid: 6685|app: 0|req: 3/7] 192.168.78.1 () {54 vars in 1104 bytes} [Sun Jun 23 16:34:50 2019] POST /user/register => generated 0 bytes in 262 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 1)
+2019-06-23 16:34:50,635[django_console:20] [views:index] [INFO:开始调用index方法]
+2019-06-23 16:34:50,638[django_console:55] [views:index] [INFO:有缓存]
+[pid: 6683|app: 0|req: 3/8] 192.168.78.1 () {48 vars in 920 bytes} [Sun Jun 23 16:34:50 2019] GET / => generated 8379 bytes in 44 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 4/9] 192.168.78.1 () {44 vars in 794 bytes} [Sun Jun 23 16:34:51 2019] GET /images/icons.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:34:57,053[django_console:134] [views:get] [INFO:开始返回登录界面，没有cookies]
+[pid: 6682|app: 0|req: 3/10] 192.168.78.1 () {46 vars in 896 bytes} [Sun Jun 23 16:34:57 2019] GET /user/login => generated 2091 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 2)
+[pid: 6682|app: 0|req: 5/11] 192.168.78.1 () {44 vars in 818 bytes} [Sun Jun 23 16:34:57 2019] GET /images/login_banner.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 5/12] 192.168.78.1 () {44 vars in 808 bytes} [Sun Jun 23 16:34:57 2019] GET /images/icons02.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:35:05,917[django_console:149] [views:post] [INFO:开始进行登录验证]
+[pid: 6682|app: 0|req: 6/13] 192.168.78.1 () {54 vars in 1095 bytes} [Sun Jun 23 16:35:05 2019] POST /user/login => generated 2109 bytes in 26 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 1)
+[pid: 6682|app: 0|req: 7/14] 192.168.78.1 () {44 vars in 808 bytes} [Sun Jun 23 16:35:06 2019] GET /images/icons02.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 4/15] 192.168.78.1 () {44 vars in 818 bytes} [Sun Jun 23 16:35:06 2019] GET /images/login_banner.png => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:36:42,315[django_console:32] [views:get] [INFO:显示注册界面]
+[pid: 6682|app: 0|req: 8/16] 192.168.78.1 () {46 vars in 912 bytes} [Sun Jun 23 16:36:42 2019] GET /user/register => generated 2633 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 5/17] 192.168.78.1 () {44 vars in 823 bytes} [Sun Jun 23 16:36:42 2019] GET /images/interval_line.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6682|app: 0|req: 9/18] 192.168.78.1 () {44 vars in 827 bytes} [Sun Jun 23 16:36:42 2019] GET /images/register_banner.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 5/19] 192.168.78.1 () {44 vars in 811 bytes} [Sun Jun 23 16:36:42 2019] GET /images/icons02.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:36:55,921[django_console:68] [views:post] [INFO:user1注册成功，开始保存用户信息]
+2019-06-23 16:36:55,928[django_console:70] [views:post] [INFO:保存用户信息成功]
+2019-06-23 16:36:55,932[django_console:83] [views:send] [INFO:开始发送激活邮件，当前用户user12712305655@qq.com]
+2019-06-23 16:36:56,121[django_console:94] [views:send] [INFO:已发送邮件eyJhbGciOiJIUzUxMiIsImlhdCI6MTU2MTMwNzgxNSwiZXhwIjoxNTYxMzExNDE1fQ.eyJjb25maXJtIjozfQ.GtxTa3odBmoSvZG3AOUHOzKhNajeX3FvjTD6Qd32tWctu0hhDvdVl7bdyYnw11x4Uig4HE2a3_kD7_y_Ya3_fg]
+[pid: 6683|app: 0|req: 6/20] 192.168.78.1 () {54 vars in 1104 bytes} [Sun Jun 23 16:36:55 2019] POST /user/register => generated 0 bytes in 287 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 3)
+2019-06-23 16:36:56,201[django_console:20] [views:index] [INFO:开始调用index方法]
+2019-06-23 16:36:56,218[django_console:55] [views:index] [INFO:有缓存]
+[pid: 6683|app: 0|req: 7/21] 192.168.78.1 () {48 vars in 920 bytes} [Sun Jun 23 16:36:56 2019] GET / => generated 8379 bytes in 58 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 8/22] 192.168.78.1 () {44 vars in 794 bytes} [Sun Jun 23 16:36:56 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:37:33,849[django_console:134] [views:get] [INFO:开始返回登录界面，没有cookies]
+[pid: 6683|app: 0|req: 9/23] 192.168.78.1 () {46 vars in 896 bytes} [Sun Jun 23 16:37:33 2019] GET /user/login => generated 2091 bytes in 22 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 6683|app: 0|req: 10/24] 192.168.78.1 () {44 vars in 818 bytes} [Sun Jun 23 16:37:34 2019] GET /images/login_banner.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 6/25] 192.168.78.1 () {44 vars in 808 bytes} [Sun Jun 23 16:37:34 2019] GET /images/icons02.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:37:40,066[django_console:149] [views:post] [INFO:开始进行登录验证]
+2019-06-23 16:37:40,092[django_console:83] [views:send] [INFO:开始发送激活邮件，当前用户user2712305655@qq.com]
+2019-06-23 16:37:40,195[django_console:94] [views:send] [INFO:已发送邮件eyJhbGciOiJIUzUxMiIsImlhdCI6MTU2MTMwNzg2MCwiZXhwIjoxNTYxMzExNDYwfQ.eyJjb25maXJtIjoyfQ.hWU05idO7YwTJNol0J9kOgjQnookenzjh9-l0JRy5VdGJQ9frpWgfwDBJT4cUJUPnX0woSBPnCsA-vXHOKovGw]
+[pid: 6682|app: 0|req: 10/26] 192.168.78.1 () {54 vars in 1095 bytes} [Sun Jun 23 16:37:40 2019] POST /user/login => generated 2169 bytes in 151 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 8/28] 192.168.78.1 () {44 vars in 808 bytes} [Sun Jun 23 16:37:40 2019] GET /images/icons02.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 8/28] 192.168.78.1 () {44 vars in 818 bytes} [Sun Jun 23 16:37:40 2019] GET /images/login_banner.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:40:30,548[django_console:20] [views:index] [INFO:开始调用index方法]
+2019-06-23 16:40:30,551[django_console:55] [views:index] [INFO:有缓存]
+[pid: 6683|app: 0|req: 11/29] 192.168.78.1 () {44 vars in 833 bytes} [Sun Jun 23 16:40:30 2019] GET / => generated 8379 bytes in 53 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 9/30] 192.168.78.1 () {44 vars in 794 bytes} [Sun Jun 23 16:40:30 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:40:33,317[django_console:32] [views:get] [INFO:显示注册界面]
+[pid: 6681|app: 0|req: 1/31] 192.168.78.1 () {46 vars in 902 bytes} [Sun Jun 23 16:40:32 2019] GET /user/register => generated 2633 bytes in 552 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 10/32] 192.168.78.1 () {44 vars in 823 bytes} [Sun Jun 23 16:40:33 2019] GET /images/interval_line.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6681|app: 0|req: 3/34] 192.168.78.1 () {44 vars in 811 bytes} [Sun Jun 23 16:40:33 2019] GET /images/icons02.png => generated 77 bytes in 15 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6681|app: 0|req: 3/34] 192.168.78.1 () {44 vars in 827 bytes} [Sun Jun 23 16:40:33 2019] GET /images/register_banner.png => generated 77 bytes in 15 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:40:48,579[django_console:68] [views:post] [INFO:user2注册成功，开始保存用户信息]
+2019-06-23 16:40:48,582[django_console:70] [views:post] [INFO:保存用户信息成功]
+2019-06-23 16:40:48,585[django_console:83] [views:send] [INFO:开始发送激活邮件，当前用户user2gongyi225588@sina.com]
+2019-06-23 16:40:48,590[django_console:94] [views:send] [INFO:已发送邮件eyJhbGciOiJIUzUxMiIsImlhdCI6MTU2MTMwODA0OCwiZXhwIjoxNTYxMzExNjQ4fQ.eyJjb25maXJtIjo0fQ.vqLFFxpoO46D2IWDuJ1YoY6mbCA4TE98SSa6KigkWU8cB8VJSBxLvXiQ5i9jPtCu-1wBZ8fqIV8h0EcSDPsJJA]
+[pid: 6685|app: 0|req: 11/35] 192.168.78.1 () {54 vars in 1104 bytes} [Sun Jun 23 16:40:48 2019] POST /user/register => generated 0 bytes in 118 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 3)
+2019-06-23 16:40:48,695[django_console:20] [views:index] [INFO:开始调用index方法]
+2019-06-23 16:40:48,715[django_console:55] [views:index] [INFO:有缓存]
+[pid: 6681|app: 0|req: 4/36] 192.168.78.1 () {48 vars in 920 bytes} [Sun Jun 23 16:40:48 2019] GET / => generated 8379 bytes in 125 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 12/37] 192.168.78.1 () {44 vars in 794 bytes} [Sun Jun 23 16:40:49 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:48:27,268[django_console:32] [views:get] [INFO:显示注册界面]
+[pid: 6685|app: 0|req: 13/38] 192.168.78.1 () {46 vars in 902 bytes} [Sun Jun 23 16:48:27 2019] GET /user/register => generated 2633 bytes in 30 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 1)
+[pid: 6683|app: 0|req: 12/39] 192.168.78.1 () {44 vars in 823 bytes} [Sun Jun 23 16:48:27 2019] GET /images/interval_line.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6681|app: 0|req: 5/40] 192.168.78.1 () {44 vars in 827 bytes} [Sun Jun 23 16:48:27 2019] GET /images/register_banner.png => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 14/41] 192.168.78.1 () {44 vars in 811 bytes} [Sun Jun 23 16:48:27 2019] GET /images/icons02.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:48:35,880[django_console:68] [views:post] [INFO:user1注册成功，开始保存用户信息]
+2019-06-23 16:48:35,884[django_console:70] [views:post] [INFO:保存用户信息成功]
+2019-06-23 16:48:35,886[django_console:83] [views:send] [INFO:开始发送激活邮件，当前用户user12712305655@qq.com]
+2019-06-23 16:48:35,891[django_console:94] [views:send] [INFO:已发送邮件eyJhbGciOiJIUzUxMiIsImlhdCI6MTU2MTMwODUxNSwiZXhwIjoxNTYxMzEyMTE1fQ.eyJjb25maXJtIjo1fQ.iCo39WaJfC9kwwiEanQDbjiSs4glhK3mnn5qnvOkAvWvbRpmQbx7A9bDVlRcsu6Dar9eT-Z7u2olG4ig7_YqkA]
+[pid: 6683|app: 0|req: 13/42] 192.168.78.1 () {54 vars in 1104 bytes} [Sun Jun 23 16:48:35 2019] POST /user/register => generated 0 bytes in 122 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 1)
+2019-06-23 16:48:35,991[django_console:20] [views:index] [INFO:开始调用index方法]
+2019-06-23 16:48:35,995[django_console:55] [views:index] [INFO:有缓存]
+[pid: 6683|app: 0|req: 14/43] 192.168.78.1 () {48 vars in 920 bytes} [Sun Jun 23 16:48:35 2019] GET / => generated 8379 bytes in 48 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 15/44] 192.168.78.1 () {44 vars in 794 bytes} [Sun Jun 23 16:48:36 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:50:03,109[django_console:134] [views:get] [INFO:开始返回登录界面，没有cookies]
+[pid: 6683|app: 0|req: 15/45] 192.168.78.1 () {46 vars in 896 bytes} [Sun Jun 23 16:50:03 2019] GET /user/login => generated 2091 bytes in 22 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 12/46] 192.168.78.1 () {44 vars in 808 bytes} [Sun Jun 23 16:50:03 2019] GET /images/icons02.png => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6682|app: 0|req: 12/47] 192.168.78.1 () {44 vars in 818 bytes} [Sun Jun 23 16:50:03 2019] GET /images/login_banner.png => generated 77 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:50:10,769[django_console:149] [views:post] [INFO:开始进行登录验证]
+2019-06-23 16:50:10,776[django_console:163] [views:post] [INFO:保存session成功]
+2019-06-23 16:50:10,777[django_console:172] [views:post] [INFO:登录且保存用户名成功user1]
+[pid: 6681|app: 0|req: 6/48] 192.168.78.1 () {54 vars in 1095 bytes} [Sun Jun 23 16:50:10 2019] POST /user/login => generated 0 bytes in 30 msecs (HTTP/1.1 302) 6 headers in 226 bytes (1 switches on core 3)
+2019-06-23 16:50:10,800[django_console:20] [views:index] [INFO:开始调用index方法]
+2019-06-23 16:50:10,804[django_console:55] [views:index] [INFO:有缓存]
+[pid: 6685|app: 0|req: 16/49] 192.168.78.1 () {48 vars in 961 bytes} [Sun Jun 23 16:50:10 2019] GET / => generated 8426 bytes in 50 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6683|app: 0|req: 16/50] 192.168.78.1 () {44 vars in 838 bytes} [Sun Jun 23 16:50:11 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:50:15,847[django_console:156] [views:detail] [INFO:进入商品详情界面,当前商品id1]
+2019-06-23 16:50:15,850[django_console:164] [views:detail] [INFO:已经获得商品信息1鲜芒1]
+2019-06-23 16:50:15,860[django_console:170] [views:detail] [INFO:获取商品信息完毕，新品奇异果1]
+[pid: 6685|app: 0|req: 17/51] 192.168.78.1 () {46 vars in 936 bytes} [Sun Jun 23 16:50:15 2019] GET /detail/1 => generated 7771 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 17/52] 192.168.78.1 () {44 vars in 828 bytes} [Sun Jun 23 16:50:15 2019] GET /detail/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 18/53] 192.168.78.1 () {44 vars in 846 bytes} [Sun Jun 23 16:50:16 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 18/54] 192.168.78.1 () {44 vars in 828 bytes} [Sun Jun 23 16:50:16 2019] GET /detail/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:50:17,783[django_console:66] [views:add] [INFO:向购物车中增加商品11]
+2019-06-23 16:50:17,789[django_console:95] [views:add] [INFO:<class 'bytes'>b'1'值<class 'bytes'>]
+2019-06-23 16:50:17,790[django_console:97] [views:add] [INFO:添加成功1]
+[pid: 6685|app: 0|req: 19/55] 192.168.78.1 () {46 vars in 856 bytes} [Sun Jun 23 16:50:17 2019] GET /cart/add/?id=1&num=1 => generated 99 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+2019-06-23 16:50:21,151[django_console:66] [views:add] [INFO:向购物车中增加商品12]
+2019-06-23 16:50:21,155[django_console:95] [views:add] [INFO:<class 'bytes'>b'3'值<class 'bytes'>]
+2019-06-23 16:50:21,155[django_console:97] [views:add] [INFO:添加成功3]
+[pid: 6683|app: 0|req: 19/56] 192.168.78.1 () {46 vars in 856 bytes} [Sun Jun 23 16:50:21 2019] GET /cart/add/?id=1&num=2 => generated 99 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+2019-06-23 16:50:23,661[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数11]
+[pid: 6685|app: 0|req: 20/57] 192.168.78.1 () {46 vars in 944 bytes} [Sun Jun 23 16:50:23 2019] GET /list/1/1 => generated 4303 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 21/58] 192.168.78.1 () {44 vars in 828 bytes} [Sun Jun 23 16:50:23 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6682|app: 0|req: 14/59] 192.168.78.1 () {44 vars in 856 bytes} [Sun Jun 23 16:50:23 2019] GET /list/images/icons.png => generated 77 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 14/60] 192.168.78.1 () {44 vars in 864 bytes} [Sun Jun 23 16:50:23 2019] GET /list/images/shop_cart.png => generated 77 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:50:25,591[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数11]
+[pid: 6682|app: 0|req: 15/61] 192.168.78.1 () {46 vars in 965 bytes} [Sun Jun 23 16:50:25 2019] GET /list/1/1?sort=sales => generated 4297 bytes in 106 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6682|app: 0|req: 16/62] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:25 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 23/63] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:25 2019] GET /list/images/icons.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 23/64] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:25 2019] GET /list/images/shop_cart.png => generated 77 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 20/65] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:25 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:50:26,689[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数11]
+[pid: 6681|app: 0|req: 7/66] 192.168.78.1 () {46 vars in 976 bytes} [Sun Jun 23 16:50:26 2019] GET /list/1/1?sort=price => generated 4297 bytes in 43 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 24/67] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:26 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6681|app: 0|req: 8/68] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:26 2019] GET /list/images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6681|app: 0|req: 9/69] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:26 2019] GET /list/images/shop_cart.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 17/70] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:26 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:50:27,984[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数11]
+[pid: 6682|app: 0|req: 18/71] 192.168.78.1 () {46 vars in 955 bytes} [Sun Jun 23 16:50:27 2019] GET /list/1/1 => generated 4303 bytes in 31 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 3)
+[pid: 6682|app: 0|req: 19/72] 192.168.78.1 () {44 vars in 828 bytes} [Sun Jun 23 16:50:28 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 21/73] 192.168.78.1 () {44 vars in 856 bytes} [Sun Jun 23 16:50:28 2019] GET /list/images/icons.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 22/74] 192.168.78.1 () {44 vars in 864 bytes} [Sun Jun 23 16:50:28 2019] GET /list/images/shop_cart.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 20/75] 192.168.78.1 () {44 vars in 828 bytes} [Sun Jun 23 16:50:28 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:50:29,343[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数11]
+[pid: 6685|app: 0|req: 25/76] 192.168.78.1 () {46 vars in 965 bytes} [Sun Jun 23 16:50:29 2019] GET /list/1/1?sort=price => generated 4297 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 26/77] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:29 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 27/78] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:29 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6681|app: 0|req: 10/79] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:29 2019] GET /list/images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6681|app: 0|req: 11/80] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:29 2019] GET /list/images/shop_cart.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:50:30,325[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数11]
+[pid: 6681|app: 0|req: 12/81] 192.168.78.1 () {46 vars in 976 bytes} [Sun Jun 23 16:50:30 2019] GET /list/1/1?sort=sales => generated 4297 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6681|app: 0|req: 13/82] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:30 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6682|app: 0|req: 21/83] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:30 2019] GET /list/images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6683|app: 0|req: 23/84] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:30 2019] GET /list/images/shop_cart.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 24/85] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:30 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:50:32,152[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数12]
+[pid: 6685|app: 0|req: 28/86] 192.168.78.1 () {46 vars in 976 bytes} [Sun Jun 23 16:50:32 2019] GET /list/1/2?sort=sales => generated 4300 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6682|app: 0|req: 22/87] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:32 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 29/88] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:32 2019] GET /list/images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6682|app: 0|req: 23/89] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:32 2019] GET /list/images/shop_cart.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 30/90] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:32 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:50:34,061[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数11]
+[pid: 6682|app: 0|req: 24/91] 192.168.78.1 () {46 vars in 976 bytes} [Sun Jun 23 16:50:34 2019] GET /list/1/1?sort=price => generated 4297 bytes in 62 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 6683|app: 0|req: 25/92] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:34 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6681|app: 0|req: 14/93] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:34 2019] GET /list/images/icons.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6681|app: 0|req: 15/94] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:34 2019] GET /list/images/shop_cart.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6681|app: 0|req: 16/95] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:34 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:50:36,743[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数12]
+[pid: 6682|app: 0|req: 25/96] 192.168.78.1 () {46 vars in 976 bytes} [Sun Jun 23 16:50:36 2019] GET /list/1/2?sort=price => generated 4300 bytes in 60 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6681|app: 0|req: 17/97] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:36 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 26/98] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:36 2019] GET /list/images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6682|app: 0|req: 26/99] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:36 2019] GET /list/images/shop_cart.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 27/100] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:36 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:50:39,551[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数11]
+[pid: 6683|app: 0|req: 28/101] 192.168.78.1 () {46 vars in 976 bytes} [Sun Jun 23 16:50:39 2019] GET /list/1/1?sort=sales => generated 4297 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 31/102] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:39 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6681|app: 0|req: 18/103] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:39 2019] GET /list/images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 32/104] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:39 2019] GET /list/images/shop_cart.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 29/105] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:39 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:50:41,727[django_console:77] [views:list] [INFO:开始调用list方法，接收两个参数12]
+[pid: 6683|app: 0|req: 30/106] 192.168.78.1 () {46 vars in 976 bytes} [Sun Jun 23 16:50:41 2019] GET /list/1/2?sort=sales => generated 4300 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 33/107] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:41 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6681|app: 0|req: 20/109] 192.168.78.1 () {44 vars in 875 bytes} [Sun Jun 23 16:50:41 2019] GET /list/images/shop_cart.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6681|app: 0|req: 20/109] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:50:41 2019] GET /list/images/icons.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 34/110] 192.168.78.1 () {44 vars in 839 bytes} [Sun Jun 23 16:50:41 2019] GET /list/1/static/js/slide.js => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:50:42,940[django_console:156] [views:detail] [INFO:进入商品详情界面,当前商品id4]
+2019-06-23 16:50:42,946[django_console:164] [views:detail] [INFO:已经获得商品信息4奇异果1]
+2019-06-23 16:50:42,951[django_console:170] [views:detail] [INFO:获取商品信息完毕，新品奇异果1]
+[pid: 6681|app: 0|req: 21/111] 192.168.78.1 () {46 vars in 955 bytes} [Sun Jun 23 16:50:42 2019] GET /detail/4 => generated 7786 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 35/112] 192.168.78.1 () {44 vars in 828 bytes} [Sun Jun 23 16:50:42 2019] GET /detail/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 36/113] 192.168.78.1 () {44 vars in 846 bytes} [Sun Jun 23 16:50:43 2019] GET /images/icons.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 37/114] 192.168.78.1 () {44 vars in 828 bytes} [Sun Jun 23 16:50:43 2019] GET /detail/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:50:45,273[django_console:66] [views:add] [INFO:向购物车中增加商品42]
+2019-06-23 16:50:45,276[django_console:95] [views:add] [INFO:<class 'bytes'>b'3'值<class 'bytes'>]
+2019-06-23 16:50:45,277[django_console:95] [views:add] [INFO:<class 'bytes'>b'2'值<class 'bytes'>]
+2019-06-23 16:50:45,278[django_console:97] [views:add] [INFO:添加成功5]
+[pid: 6682|app: 0|req: 27/115] 192.168.78.1 () {46 vars in 856 bytes} [Sun Jun 23 16:50:45 2019] GET /cart/add/?id=4&num=2 => generated 99 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 28/116] 192.168.78.1 () {46 vars in 969 bytes} [Sun Jun 23 16:50:49 2019] GET /order/place?good_id=4 => generated 27 bytes in 49 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+2019-06-23 16:56:51,724[django_console:23] [views:cart] [INFO:获取购物车信息5]
+2019-06-23 16:56:51,725[django_console:29] [views:cart] [INFO:<class 'bytes'>b'3'值<class 'bytes'>]
+2019-06-23 16:56:51,727[django_console:29] [views:cart] [INFO:<class 'bytes'>b'2'值<class 'bytes'>]
+2019-06-23 16:56:51,732[django_console:33] [views:cart] [INFO:共2件商品]
+[pid: 6682|app: 0|req: 29/117] 192.168.78.1 () {46 vars in 938 bytes} [Sun Jun 23 16:56:51 2019] GET /cart/ => generated 5476 bytes in 34 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 2)
+[pid: 6681|app: 0|req: 22/118] 192.168.78.1 () {44 vars in 821 bytes} [Sun Jun 23 16:56:51 2019] GET /cart/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 38/119] 192.168.78.1 () {44 vars in 843 bytes} [Sun Jun 23 16:56:51 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 31/120] 192.168.78.1 () {44 vars in 821 bytes} [Sun Jun 23 16:56:51 2019] GET /cart/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:56:55,764[django_console:110] [views:edit] [INFO:修改购物车数量]
+2019-06-23 16:56:55,768[django_console:141] [views:edit] [INFO:修改购物车数量成功514现在购物车6]
+[pid: 6683|app: 0|req: 32/121] 192.168.78.1 () {46 vars in 855 bytes} [Sun Jun 23 16:56:55 2019] GET /cart/edit/?id=1&num=4 => generated 64 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+2019-06-23 16:56:58,590[django_console:110] [views:edit] [INFO:修改购物车数量]
+2019-06-23 16:56:58,595[django_console:141] [views:edit] [INFO:修改购物车数量成功513现在购物车5]
+[pid: 6681|app: 0|req: 23/122] 192.168.78.1 () {46 vars in 855 bytes} [Sun Jun 23 16:56:58 2019] GET /cart/edit/?id=1&num=3 => generated 64 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+2019-06-23 16:57:01,336[django_console:26] [views:order] [INFO:用户进入订单结算界面52得的1]
+2019-06-23 16:57:01,336[django_console:39] [views:order] [INFO:现在读取商品1]
+2019-06-23 16:57:01,339[django_console:46] [views:order] [INFO:330.00]
+2019-06-23 16:57:01,339[django_console:39] [views:order] [INFO:现在读取商品4]
+2019-06-23 16:57:01,341[django_console:46] [views:order] [INFO:248.00]
+2019-06-23 16:57:01,342[django_console:61] [views:order] [INFO:返回订单数据]
+[pid: 6683|app: 0|req: 33/123] 192.168.78.1 () {54 vars in 1136 bytes} [Sun Jun 23 16:57:01 2019] POST /order/place => generated 5972 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6681|app: 0|req: 24/124] 192.168.78.1 () {44 vars in 829 bytes} [Sun Jun 23 16:57:01 2019] GET /order/static/js/slide.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 39/125] 192.168.78.1 () {44 vars in 849 bytes} [Sun Jun 23 16:57:01 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6682|app: 0|req: 30/126] 192.168.78.1 () {44 vars in 857 bytes} [Sun Jun 23 16:57:01 2019] GET /images/pay_icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6681|app: 0|req: 25/127] 192.168.78.1 () {44 vars in 829 bytes} [Sun Jun 23 16:57:01 2019] GET /order/static/js/slide.js => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:57:09,103[django_console:310] [views:get] [INFO:开始执行site类中的get方法5]
+[pid: 6681|app: 0|req: 26/128] 192.168.78.1 () {46 vars in 949 bytes} [Sun Jun 23 16:57:09 2019] GET /user/site => generated 3517 bytes in 26 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 40/129] 192.168.78.1 () {44 vars in 847 bytes} [Sun Jun 23 16:57:09 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6681|app: 0|req: 27/130] 192.168.78.1 () {44 vars in 851 bytes} [Sun Jun 23 16:57:09 2019] GET /images/left_bg.jpg => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:57:33,597[django_console:329] [views:post] [INFO:开始执行site类中的post方法5<class 'django.utils.functional.SimpleLazyObject'>]
+2019-06-23 16:57:33,600[django_console:353] [views:post] [INFO:下边开始保存地址TrueNone]
+[pid: 6682|app: 0|req: 31/131] 192.168.78.1 () {54 vars in 1136 bytes} [Sun Jun 23 16:57:33 2019] POST /user/site => generated 3517 bytes in 137 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 1)
+[pid: 6683|app: 0|req: 34/132] 192.168.78.1 () {44 vars in 847 bytes} [Sun Jun 23 16:57:34 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 35/133] 192.168.78.1 () {44 vars in 851 bytes} [Sun Jun 23 16:57:34 2019] GET /images/left_bg.jpg => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:57:35,870[django_console:197] [views:info] [INFO:调用info方法，进入用户信息中心界面]
+2019-06-23 16:57:35,871[django_console:201] [views:info] [INFO:开始获取浏览历史记录]
+[pid: 6682|app: 0|req: 32/134] 192.168.78.1 () {46 vars in 947 bytes} [Sun Jun 23 16:57:35 2019] GET /user/info => generated 3526 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 6683|app: 0|req: 36/135] 192.168.78.1 () {44 vars in 847 bytes} [Sun Jun 23 16:57:36 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6682|app: 0|req: 33/136] 192.168.78.1 () {44 vars in 851 bytes} [Sun Jun 23 16:57:36 2019] GET /images/left_bg.jpg => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6681|app: 0|req: 28/137] 192.168.78.1 () {44 vars in 855 bytes} [Sun Jun 23 16:57:36 2019] GET /images/shop_cart.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 41/138] 192.168.78.1 () {46 vars in 973 bytes} [Sun Jun 23 16:57:43 2019] GET /user/user_center_order => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 34/139] 192.168.78.1 () {46 vars in 947 bytes} [Sun Jun 23 16:57:48 2019] GET /user/cart => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:58:21,062[django_console:197] [views:info] [INFO:调用info方法，进入用户信息中心界面]
+2019-06-23 16:58:21,062[django_console:201] [views:info] [INFO:开始获取浏览历史记录]
+[pid: 6682|app: 0|req: 35/140] 192.168.78.1 () {48 vars in 978 bytes} [Sun Jun 23 16:58:21 2019] GET /user/info => generated 3526 bytes in 28 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 42/141] 192.168.78.1 () {44 vars in 847 bytes} [Sun Jun 23 16:58:21 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6682|app: 0|req: 36/142] 192.168.78.1 () {44 vars in 851 bytes} [Sun Jun 23 16:58:21 2019] GET /images/left_bg.jpg => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6681|app: 0|req: 29/143] 192.168.78.1 () {44 vars in 855 bytes} [Sun Jun 23 16:58:21 2019] GET /images/shop_cart.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 43/144] 192.168.78.1 () {46 vars in 973 bytes} [Sun Jun 23 16:58:22 2019] GET /user/user_center_order => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+2019-06-23 16:59:13,845[django_console:197] [views:info] [INFO:调用info方法，进入用户信息中心界面]
+2019-06-23 16:59:13,845[django_console:201] [views:info] [INFO:开始获取浏览历史记录]
+[pid: 6681|app: 0|req: 30/145] 192.168.78.1 () {48 vars in 978 bytes} [Sun Jun 23 16:59:13 2019] GET /user/info => generated 3526 bytes in 28 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 6682|app: 0|req: 37/146] 192.168.78.1 () {44 vars in 847 bytes} [Sun Jun 23 16:59:14 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 44/148] 192.168.78.1 () {44 vars in 851 bytes} [Sun Jun 23 16:59:14 2019] GET /images/left_bg.jpg => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6681|app: 0|req: 31/148] 192.168.78.1 () {44 vars in 855 bytes} [Sun Jun 23 16:59:14 2019] GET /images/shop_cart.png => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 45/149] 192.168.78.1 () {46 vars in 973 bytes} [Sun Jun 23 16:59:15 2019] GET /user/user_center_order => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:59:20,731[django_console:197] [views:info] [INFO:调用info方法，进入用户信息中心界面]
+2019-06-23 16:59:20,731[django_console:201] [views:info] [INFO:开始获取浏览历史记录]
+[pid: 6683|app: 0|req: 37/150] 192.168.78.1 () {48 vars in 978 bytes} [Sun Jun 23 16:59:20 2019] GET /user/info => generated 3522 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 38/151] 192.168.78.1 () {44 vars in 847 bytes} [Sun Jun 23 16:59:20 2019] GET /images/icons.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6681|app: 0|req: 32/152] 192.168.78.1 () {44 vars in 855 bytes} [Sun Jun 23 16:59:20 2019] GET /images/shop_cart.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 46/153] 192.168.78.1 () {44 vars in 851 bytes} [Sun Jun 23 16:59:20 2019] GET /images/left_bg.jpg => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+2019-06-23 16:59:21,360[django_console:197] [views:info] [INFO:调用info方法，进入用户信息中心界面]
+2019-06-23 16:59:21,360[django_console:201] [views:info] [INFO:开始获取浏览历史记录]
+[pid: 6683|app: 0|req: 39/154] 192.168.78.1 () {48 vars in 978 bytes} [Sun Jun 23 16:59:21 2019] GET /user/info => generated 3522 bytes in 29 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 47/155] 192.168.78.1 () {44 vars in 847 bytes} [Sun Jun 23 16:59:21 2019] GET /images/icons.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6682|app: 0|req: 38/156] 192.168.78.1 () {44 vars in 855 bytes} [Sun Jun 23 16:59:21 2019] GET /images/shop_cart.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6683|app: 0|req: 40/157] 192.168.78.1 () {44 vars in 851 bytes} [Sun Jun 23 16:59:21 2019] GET /images/left_bg.jpg => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+2019-06-23 16:59:21,612[django_console:197] [views:info] [INFO:调用info方法，进入用户信息中心界面]
+2019-06-23 16:59:21,612[django_console:201] [views:info] [INFO:开始获取浏览历史记录]
+[pid: 6681|app: 0|req: 33/158] 192.168.78.1 () {48 vars in 978 bytes} [Sun Jun 23 16:59:21 2019] GET /user/info => generated 3526 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 3)
+[pid: 6685|app: 0|req: 48/159] 192.168.78.1 () {44 vars in 847 bytes} [Sun Jun 23 16:59:21 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 42/160] 192.168.78.1 () {44 vars in 851 bytes} [Sun Jun 23 16:59:21 2019] GET /images/left_bg.jpg => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 42/161] 192.168.78.1 () {44 vars in 855 bytes} [Sun Jun 23 16:59:21 2019] GET /images/shop_cart.png => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+2019-06-23 16:59:22,755[django_console:197] [views:info] [INFO:调用info方法，进入用户信息中心界面]
+2019-06-23 16:59:22,755[django_console:201] [views:info] [INFO:开始获取浏览历史记录]
+[pid: 6683|app: 0|req: 43/162] 192.168.78.1 () {46 vars in 971 bytes} [Sun Jun 23 16:59:22 2019] GET /user/user_center_info => generated 3522 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 50/163] 192.168.78.1 () {44 vars in 859 bytes} [Sun Jun 23 16:59:22 2019] GET /images/icons.png => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 6685|app: 0|req: 51/164] 192.168.78.1 () {44 vars in 863 bytes} [Sun Jun 23 16:59:22 2019] GET /images/left_bg.jpg => generated 77 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 51/165] 192.168.78.1 () {44 vars in 867 bytes} [Sun Jun 23 16:59:22 2019] GET /images/shop_cart.png => generated 77 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 52/166] 192.168.78.1 () {46 vars in 949 bytes} [Sun Jun 23 16:59:24 2019] GET /cart => generated 0 bytes in 28 msecs (HTTP/1.1 301) 3 headers in 111 bytes (1 switches on core 1)
+2019-06-23 16:59:24,233[django_console:23] [views:cart] [INFO:获取购物车信息5]
+2019-06-23 16:59:24,235[django_console:29] [views:cart] [INFO:<class 'bytes'>b'3'值<class 'bytes'>]
+2019-06-23 16:59:24,236[django_console:29] [views:cart] [INFO:<class 'bytes'>b'2'值<class 'bytes'>]
+2019-06-23 16:59:24,237[django_console:33] [views:cart] [INFO:共2件商品]
+[pid: 6683|app: 0|req: 44/167] 192.168.78.1 () {46 vars in 951 bytes} [Sun Jun 23 16:59:24 2019] GET /cart/ => generated 5476 bytes in 27 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 1)
+[pid: 6683|app: 0|req: 45/168] 192.168.78.1 () {44 vars in 821 bytes} [Sun Jun 23 16:59:24 2019] GET /cart/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 6683|app: 0|req: 46/169] 192.168.78.1 () {44 vars in 843 bytes} [Sun Jun 23 16:59:24 2019] GET /images/icons.png => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6685|app: 0|req: 53/170] 192.168.78.1 () {44 vars in 821 bytes} [Sun Jun 23 16:59:24 2019] GET /cart/static/js/slide.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 6685|app: 0|req: 54/171] 192.168.78.1 () {46 vars in 963 bytes} [Sun Jun 23 16:59:28 2019] GET /order/place => generated 27 bytes in 38 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)

@@ -2,47 +2,46 @@
 {% block title %}天天生鲜-购物车{% endblock title %}
 {% block head %}
 <script language="JavaScript" type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
-<script language="JavaScript" type="text/javascript" src="/static/js/cart.js"></script>
+<script language="JavaScript" type="text/javascript" src="/static/js/cart.js"> </script>
 
 {% endblock head %}
 
 {% block body %}
-	<div class="total_count">全部商品<em id="total_num">{{ total_count }}</em>件</div>
-	<ul class="cart_list_th clearfix">
-		<li class="col01">商品名称</li>
-		<li class="col02">商品单位</li>
-		<li class="col03">商品价格</li>
-		<li class="col04">数量</li>
-		<li class="col05">小计</li>
-		<li class="col06">操作</li>
-	</ul>
-<form method="post" action="{% url 'order_namespace:place_url'%}">{% csrf_token %}
-	{% for good in goods %}
-	<ul class="cart_list_td clearfix">
-		<li class="col01"><input type="checkbox" name="good_ids" value="{{ good.id }}" checked="checked"></li>
-		<li class="col02"><img src="/static/images/{{ good.image }}"></li>
-		<li class="col03" >{{ good.name }}<br><em id="test" goodname="{{good.name}}">{{ good.price }}元/{{ good.unit }}</em></li>
-		<li class="col04">{{ good.unit }}</li>
-		<li class="col05">{{ good.price }}元</li>
-		<li class="col06">
-			<div class="num_add">
-				<a href="javascript:;" class="add fl" id="add">+</a>
-				<input type="text" class="num_show fl" good_id="{{good.id}}" id="num" value="{{good.num}}">
-				<a href="javascript:;" class="minus fl" id="minus">-</a>
-			</div>
-		</li>
-		<li class="col07" id="amount">{{ good.amount }}元</li>
-		<li class="col08"><a href="javascript:;" class="delete" id="delete">删除</a></li>
-	</ul>
-	{% endfor %}
+    <div class= "total_count">全部商品<em id="total_num">{{total_count}}</em>件</div>
+    <ul class="cart_list_th clearfix">
+        <li class="col01"> 商品名称 </li>
+        <li class="col02"> 商品单位 </li>
+        <li class="col03"> 商品价格 </li>
+        <li class="col04"> 数量 </li>
+        <li class="col05"> 小计 </li>
+        <li class="col06"> 操作 </li>
+    </ul>
+<form method="post" action="{% url 'order_namespace:place_url'%}"> {% csrf_token %}
+    {% for good in goods %}
+    <ul class="cart_list_td clearfix">
+        <li class="col01"> <input type="checkbox" name="good_ids" value="{{ good.id }}" checked="checked"> </li>
+        <li class="col02"> <img src="/static/images/{{ good.image }}"> </li>
+        <li class="col03"> {{good.name}} < br> <em id="test" goodname="{{good.name}}"> {{good.price}}元/{{good.unit}} </em> </li>
+        <li class="col04"> {{good.unit}} </li>
+        <li class="col05"> {{good.price}}元 </li>
+        <li class="col06">
+           <div class="num_add">
+                <a href="javascript:;" class="add fl" id="add"> + </a>
+                <input type="text" class="num_show fl" good_id="{{good.id}}" id="num" value="{{good.num}}">
+                <a href="javascript:;" class="minus fl" id="minus"> - </a>
+            </div>
+        </li>
+        <li class="col07" id="amount">{{ good.amount }}元</li>
+        <li class="col08"> <a href="javascript:;" class="delete" id="delete">删除</a></li>
+    </ul>
+    {% endfor %}
 
-	
 
-	<ul class="settlements">
-		<li class="col01"><input type="checkbox" name="" checked="checked" id="check_all"></li>
-		<li class="col02">全选</li>
-		<li class="col03">合计(不含运费)：<span>¥</span><em id="total_amount">{{ total_amount }}</em><br>共计<b id="total_num1">{{ total_count }}</b>件商品</li>
-		<li class="col04"><input type="submit" value="去结算" style="width: 150px; height: 50px; background-color: #37ab40; font-size: 20px; color: #fff"></li>
-	</ul>
+    <ul class="settlements">
+        <li class="col01"> <input type="checkbox" name="" checked="checked" id="check_all"></li>
+        <li class="col02"> 全选</li>
+        <li class="col03"> 合计(不含运费)：<span>¥</span><em id="total_amount">{{ total_amount }}</em><br>共计<b id="total_num1">{{ total_count }}</b>件商品</li>
+        <li class="col04"> <input type="submit" value="去结算" style="width: 150px; height: 50px; background-color: #37ab40; font-size: 20px; color: #fff"></li>
+    </ul>
 </form>
 {% endblock body %}

@@ -23,6 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd^xh@qx2=%dt+i!p=r=by8gc38p$u=4pqdc1q6xxqa90wk+(uj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -108,6 +109,12 @@ CACHES = {
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 SESSION_CACHE_ALIAS = 'default'
 
+# 富文本编辑器配置
+# TINYMCE_DEFAULT_CONFIG = {
+#     'theme': 'advanced',
+#     'width': 600,
+#     'height': 400,
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -223,12 +230,12 @@ LOGGING = {
 
     'loggers':{#logging管理器..这里采用了三种日志记录方式，分别是django---将日志信息输出到文件，django.request---将信息输出到控制台
         'django_file':{
-            'handlers':['debug'],
+            'handlers':['console'],
             'level':'DEBUG',
             'propagate':False
         },
         'django_console':{
-            'handlers':['console'],
+            'handlers':['debug'],
             'level':'INFO',
             'propagate':True,
          },

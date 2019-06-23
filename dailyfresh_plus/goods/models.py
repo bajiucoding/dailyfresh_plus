@@ -1,5 +1,5 @@
 from django.db import models
-from tinymce.models import HTMLField
+# from tinymce.models import HTMLField
 # Create your models here.
 class GoodsType(models.Model):
     '''
@@ -41,12 +41,13 @@ class GoodsSKU(models.Model):
     def __str__(self):
         return self.name
 
+
 class GoodsInfo(models.Model):
     '''
     商品模型类，即SPU，标准产品单位。同样的商品
     '''
     name = models.CharField(max_length=20,verbose_name='商品名称')
-    detail = HTMLField(blank=True,verbose_name='商品详情')
+    detail = models.CharField(max_length=256,blank=True,verbose_name='商品详情')
 
     class Meta:
         db_table = 'goods'
@@ -55,18 +56,6 @@ class GoodsInfo(models.Model):
 
     def __str__(self):
         return self.name
-
-class GoodsImage(models.Model):
-    '''
-    商品图片模型类
-    '''
-    sku = models.ForeignKey('GoodsSKU',verbose_name='商品',on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='goods',verbose_name='图片路径')
-
-    class Meta:
-        db_table = 'goodsImage'
-        verbose_name = '商品图片'
-        verbose_name_plural = verbose_name
 
 class IndexGoodsBanner(models.Model):
     '''

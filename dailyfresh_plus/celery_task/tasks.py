@@ -8,22 +8,22 @@ date:       2019/5/27 18:15
 change activity:
             2019/5/27 18:15
 '''
-from __future__ import absolute_import
-from celery import Celery
+from .celery import app
 from django.conf import settings
 from django.core.mail import send_mail
-from django.template import loader,RequestContext
-from django_redis import get_redis_connection
+from django.template import loader
 import logging
 
+
+import os,sys
+os.environ['DJANGO_SETTINGS_MODULE'] = 'dailyfresh_plus.settings'
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from goods.models import GoodsType,IndexGoodsBanner,IndexPromotionBanner,IndexTypeGoodsBanner
 
-import os
-os.environ['DJANGO_SETTINGS_MODULE'] = 'dailyfresh_plus.settings'
 
 logger = logging.getLogger('django_console')
 #创建一个新celery类的实例对象
-app = Celery('celery_task.tasks',broker='redis://192.168.0.106:6379/0')
 
 #创建发送邮件的任务
 @app.task
@@ -33,14 +33,21 @@ def send_email_task(email_receiver,username,token):
     :return:
     '''
     msg = '<h1>{0},欢迎您注册为天天生鲜会员</h1>请点击下面的链接激活你的账户<br/><a href="http://192.168.78.134:8000/user/active/{1}">http://192.168.78.134:8000/user/active/{2}</a>'.format(username,token,token)
-    send_mail(subject='天天生鲜账户激活',message='',from_email=settings.EMAIL_FROM,recipient_list=[email_receiver],html_message=msg)
-    logger.info(username+'的激活邮件发送成功')
+    status = send_mail(subject='天天生鲜账户激活',message='',from_email=settings.EMAIL_FROM,recipient_list=[email_receiver],html_message=msg)
+    if status == 1:
+        logger.info(username+'的激活邮件发送成功')
+    else:
+        logger.info('激活邮件发送失败')
 
+#生成静态页面
+@app.task
 def createStaticIndex():
     '''
     产生首页静态页面。将这个静态页面缓存起来，再次访问时可以快速响应，避免每次都要从数据库中读取数据，渲染生成页面
     :return:
     '''
+    logger.info('生成静态对象')
+    print('开始生成静态对象')
     #获取商品种类信息
     types = GoodsType.objects.all()
 

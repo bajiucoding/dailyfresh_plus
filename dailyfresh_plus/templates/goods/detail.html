@@ -110,7 +110,7 @@
 			</div>
 			<div class="total">总价：<em id="gtotal">{{good.price}}</em></div>
 			<div class="operate_btn">
-				<a href="javascript:;" class="buy_btn" id="buy">立即购买</a>
+				<a href="{% url 'order_namespace:place_url' %}?good_id={{good.id}}" class="buy_btn" id="buy">立即购买</a>
 				<a href="javascript:;" class="add_cart" good_id="{{ good.id }}" id="add_cart">加入购物车</a>
 			</div>
 		</div>
